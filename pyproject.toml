@@ -3,6 +3,7 @@ name = "hexlet-code"
 version = "0.1.0"
 description = ""
 authors = ["niko gamsakhurdiya <eleron96@gmail.com>"]
+
 packages = [
   { include = "brain_games" },
 ]
@@ -11,6 +12,10 @@ packages = [
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
+autopep8 = "^1.5.7"
+pytest = "^6.2.3"
+pytest-cov = "^2.11.1"
+wemake-python-styleguide = "^0.15.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
