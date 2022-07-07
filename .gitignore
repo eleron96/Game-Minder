@@ -5,3 +5,5 @@ brain_games/scripts/__pycache__/brain_games.cpython-38.pyc
 brain_games/scripts/__pycache__/__init__.cpython-38.pyc
 brain_games/__pycache__/__init__.cpython-38.pyc
 .vscode/settings.json
+brain_games/scripts/__pycache__/
+__pycache__
