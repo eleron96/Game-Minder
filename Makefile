@@ -13,3 +13,6 @@ install:	#	Установка поетри
 
 brain-games:	#	Запуск игры
 	poetry run brain-games
+
+make lint:  #запуск flake8
+	poetry run flake8 brain_games
