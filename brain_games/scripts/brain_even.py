@@ -26,6 +26,6 @@ def brain_even():
                 i+=1
             else:                
                 print(f"Let's try again,!")
-    printf("Congratulations, {}!")
+    print("Congratulations, {}!")
 
 brain_even()

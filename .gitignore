@@ -2,3 +2,4 @@
 .vscode/
 __pycache__
 brain_games/scripts/__pycache__/brain_games.cpython-38.pyc
+brain_games/dist
