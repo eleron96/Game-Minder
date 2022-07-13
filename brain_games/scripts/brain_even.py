@@ -4,7 +4,7 @@ from random import randint
 
 
 def brain_even():
-    i = 0
+    i = 1
     
     print('Answer "yes" if the number is even, otherwise answer "no".')
     while i <= 3:
@@ -26,5 +26,6 @@ def brain_even():
                 i+=1
             else:                
                 print(f"Let's try again,!")
+    printf("Congratulations, {}!")
 
 brain_even()
