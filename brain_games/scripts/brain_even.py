@@ -20,13 +20,13 @@ def brain_even():
                 print("Correct!")
                 i+=1
             else:
-                print(f"Let's try again,!")
+                print(f"Let's try again,{name_user()}!")
         else:
             if useranswer == "no":
                 print("Correct!")
                 i+=1
             else:                
-                print(f"Let's try again,!")
+                print(f"Let's try again,{name_user()}!")
     print(f"Congratulations, {name_user()}!")
 
 brain_even()
