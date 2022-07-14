@@ -18,9 +18,8 @@ make lint:  #запуск flake8
 	poetry run flake8 brain_games
 
 brain-even: # запуск игры четное не четное
-	poetry run brain-even
-
-patch:
+	poetry run brain_even
+git:
 	poetry install
 	poetry version patch
 	poetry build
