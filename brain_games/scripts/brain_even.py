@@ -1,12 +1,14 @@
 #!/usr/bin/python -tt
 from random import randint
-from brain_games.cli import name_user, welcome_user
-
-
+import prompt
 
 def brain_even():
+
+    print("Welcome to the Brain Games!")
+    name = prompt.string('May I have your name? ')
+    print(f"Hello, {name}!")
+
     i = 1
-    welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     while i <= 3:
         for _ in range(10):
@@ -20,13 +22,18 @@ def brain_even():
                 print("Correct!")
                 i+=1
             else:
-                print(f"Let's try again,{name_user()}!")
+                print(f"Let's try again,{name}!")
         else:
             if useranswer == "no":
                 print("Correct!")
                 i+=1
             else:                
-                print(f"Let's try again,{name_user()}!")
-    print(f"Congratulations, {name_user()}!")
+                print(f"Let's try again,{name}!")
+    print(f"Congratulations, {name}!")
 
-brain_even()
+if __name__ == '__main__':
+    main()
+
+def main():
+    brain_even()
+
