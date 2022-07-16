@@ -1,4 +1,5 @@
 #!/usr/bin/python -tt
+import sys
 from random import randint
 import prompt
 
@@ -22,13 +23,15 @@ def brain_even():
                 print("Correct!")
                 i += 1
             else:
-                print(f"Let's try again,{name}!")
+                sys.exit("'yes' is wrong answer ;(. Correct answer was 'no'.\n"+f"Let's try again,{name}!")
+
+
         else:
             if useranswer == "no":
                 print("Correct!")
                 i += 1
             else:
-                print(f"Let's try again,{name}!")
+                sys.exit("'yes' is wrong answer ;(. Correct answer was 'no'.\n"+f"Let's try again,{name}!")
     print(f"Congratulations, {name}!")
 
 
