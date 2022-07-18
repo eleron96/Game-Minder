@@ -23,7 +23,7 @@ def brain_calc():
     print('What is the result of the expression?')
 
     while i <= 3:
-        x = randint(0, 3)
+        x = randint(0, 2)
         number_1 = random_number()
         number_2 = random_number()
 
@@ -49,7 +49,6 @@ def brain_calc():
             answer = number_1 - number_2
             print(f'Question: {number_1} - {number_2} ')
             useranswer = int(input('Your answer: '))
-            print(answer)
             if useranswer == answer:
                 print("Correct!")
                 i += 1
