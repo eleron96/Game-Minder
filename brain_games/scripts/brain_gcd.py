@@ -4,10 +4,12 @@ import sys
 from random import randint
 import prompt
 
+
 def random_number():
     for _ in range(3):
         expression_value = randint(0, 1000)
     return expression_value
+
 
 def brain_gcd():
     print("Welcome to the Brain Games!")
@@ -25,7 +27,7 @@ def brain_gcd():
         a = random_number()
         b = random_number()
 
-        print(f'Question: {a} + {b} ')
+        print(f'Question: {a} and {b} ')
 
         while a != 0 and b != 0:
             if a > b:
