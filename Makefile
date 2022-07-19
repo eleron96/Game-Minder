@@ -23,6 +23,9 @@ brain-even: # запуск игры четное не четное
 brain-calc: # запуск игры калькулятора
 	poetry run brain_calc
 
+brain-gcd: # запуск игры калькулятора
+	poetry run brain_gcd
+
 git:
 	poetry install
 	poetry version patch
