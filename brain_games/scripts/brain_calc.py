@@ -15,7 +15,6 @@ def brain_calc():
     print(f"Hello, {name}!")
 
     # Start Function
-
     i=1
 
     expression = ('+', '-', '*')
@@ -72,10 +71,6 @@ def brain_calc():
                          + f"Let's try again,{name}!")
 
     print(f"Congratulations, {name}!")
-
-
-
-
 
 
 
