@@ -26,6 +26,9 @@ brain-calc: # запуск игры калькулятора
 brain-gcd: # запуск игры калькулятора
 	poetry run brain_gcd
 
+brain-progression:  # запуск игры геометрическая прогрессия
+	poetry run brain_progression
+
 git:
 	poetry install
 	poetry version patch

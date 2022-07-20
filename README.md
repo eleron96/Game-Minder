@@ -6,3 +6,6 @@
 
 #Demo Brain-GCD
 [![asciicast](https://asciinema.org/a/THG20ugH64dYPKlNSWQITitTE.svg)](https://asciinema.org/a/THG20ugH64dYPKlNSWQITitTE)
+
+#Demo Brain-Progressive
+[![asciicast](https://asciinema.org/a/nXq7Y9rAOAxC0cMi6M6kQbA15.svg)](https://asciinema.org/a/nXq7Y9rAOAxC0cMi6M6kQbA15)
