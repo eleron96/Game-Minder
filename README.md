@@ -9,3 +9,6 @@
 
 #Demo Brain-Progressive
 [![asciicast](https://asciinema.org/a/nXq7Y9rAOAxC0cMi6M6kQbA15.svg)](https://asciinema.org/a/nXq7Y9rAOAxC0cMi6M6kQbA15)
+
+#Demo Brain-Prime
+[![asciicast](https://asciinema.org/a/PcgXa4Bz36uxoqdbZPkfl0Cfx.svg)](https://asciinema.org/a/PcgXa4Bz36uxoqdbZPkfl0Cfx)
