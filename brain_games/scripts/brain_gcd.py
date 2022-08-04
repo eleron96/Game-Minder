@@ -1,31 +1,21 @@
 #!/usr/bin/python -tt
 
-import sys
 from random import randint
-import prompt
+from engine.gcd_engine import welcome_user, user_lose
 
-
-def random_number():
-    for _ in range(3):
-        expression_value = randint(0, 1000)
-    return expression_value
 
 
 def brain_gcd():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print(f"Hello, {name}!")
+    name = welcome_user()
 
     # Start Function
     i = 1
 
-    print('Find the greatest common divisor of given numbers.')
-
     while i <= 3:
         answer = 0
 
-        a = random_number()
-        b = random_number()
+        a = expression_value = randint(0, 1000)
+        b = expression_value = randint(0, 1000)
 
         print(f'Question: {a} and {b} ')
 
@@ -42,8 +32,7 @@ def brain_gcd():
             print("Correct!")
             i += 1
         else:
-            sys.exit(f"{useranswer} is wrong answer ;(. Correct answer was {answer}.\n"
-                     + f"Let's try again,{name}!")
+            user_lose(useranswer, answer, name)
 
     print(f"Congratulations, {name}!")
 

@@ -1,34 +1,25 @@
 #!/usr/bin/python -tt
 
-import sys
 from random import randint
-import prompt
+from engine.calc_engine import welcome_user, user_lose
 
-def random_number():
-    for _ in range(3):
-        expression_value = randint(0, 100)
-    return expression_value
 
 def brain_calc():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print(f"Hello, {name}!")
+    name = welcome_user()
 
     # Start Function
-    i=1
+    i = 1
 
     expression = ('+', '-', '*')
 
-    print('What is the result of the expression?')
-
     while i <= 3:
         x = randint(0, 2)
-        number_1 = random_number()
-        number_2 = random_number()
+        number_1 = randint(0, 100)
+        number_2 = randint(0, 100)
 
         if expression[x] == expression[0]:
 
-            #Выражение сложение
+            # Выражение сложение
 
             answer = number_1 + number_2
             print(f'Question: {number_1} + {number_2} ')
@@ -38,12 +29,11 @@ def brain_calc():
                 print("Correct!")
                 i += 1
             else:
-                sys.exit(f"{useranswer} is wrong answer ;(. Correct answer was {answer}.\n"
-                         + f"Let's try again,{name}!")
+                user_lose(useranswer, answer, name)
 
         elif expression[x] == expression[1]:
 
-            #Выражение вычитание
+            # Выражение вычитание
 
             answer = number_1 - number_2
             print(f'Question: {number_1} - {number_2} ')
@@ -52,12 +42,11 @@ def brain_calc():
                 print("Correct!")
                 i += 1
             else:
-                sys.exit(f"{useranswer} is wrong answer ;(. Correct answer was {answer}.\n"
-                         + f"Let's try again,{name}!")
+                user_lose(useranswer, answer, name)
 
         elif expression[x] == expression[2]:
 
-            #Выражение умножение
+            # Выражение умножение
 
             answer = number_1 * number_2
             print(f'Question: {number_1} * {number_2} ')
@@ -67,11 +56,9 @@ def brain_calc():
                 print("Correct!")
                 i += 1
             else:
-                sys.exit(f"{useranswer} is wrong answer ;(. Correct answer was {answer}.\n"
-                         + f"Let's try again,{name}!")
+                user_lose(useranswer, answer, name)
 
     print(f"Congratulations, {name}!")
-
 
 
 def main():

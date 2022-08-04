@@ -1,16 +1,12 @@
 #!/usr/bin/python -tt
-import sys
 from random import randint
-import prompt
+from engine.even_engine import welcome_user, user_lose
 
 
 def brain_even():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print(f"Hello, {name}!")
+    name = welcome_user()
 
     i = 1
-    print('Answer "yes" if the number is even, otherwise answer "no".')
     while i <= 3:
         for _ in range(10):
             value = randint(0, 10)
@@ -23,15 +19,15 @@ def brain_even():
                 print("Correct!")
                 i += 1
             else:
-                sys.exit("'yes' is wrong answer ;(. Correct answer was 'no'.\n"+f"Let's try again,{name}!")
-
-
+                answer = "yes"
+                user_lose(useranswer, answer, name)
         else:
             if useranswer == "no":
                 print("Correct!")
                 i += 1
             else:
-                sys.exit("'yes' is wrong answer ;(. Correct answer was 'no'.\n"+f"Let's try again,{name}!")
+                answer = "no"
+                user_lose(useranswer, answer, name)
     print(f"Congratulations, {name}!")
 
 
