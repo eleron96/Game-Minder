@@ -19,8 +19,6 @@ def welcome_user(name_game):
     elif name_game == "brain_progression":
         print('What number is missing in the progression?')
 
-
-    print('Answer "yes" if the number is even, otherwise answer "no".')
     return name
 
 
