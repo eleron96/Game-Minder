@@ -20,12 +20,11 @@ def run(game):
         print(f"Question: {question}")
         user_answer = input("Your answer: ")
 
-        if user_answer == correct_answer:
+        if str(user_answer) == str(correct_answer):
             print('Correct!')
         else:
-            print(f"{user_answer} is wrong answer ;(. Correct answer was {correct_answer}.\n"
+            return sys.exit(f"{user_answer} is wrong answer ;(. Correct answer was {correct_answer}.\n"
                   + f"Let's try again,{name}!")
-            break
 
     print(f"Congratulations, {name}!")
 

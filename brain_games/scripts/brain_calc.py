@@ -1,10 +1,11 @@
 #!/usr/bin/python -tt
 
-from ..games.game_calc import brain_calc
+from brain_games.engine import run
+from brain_games.games import game_calc
 
 
 def main():
-    brain_calc()
+    run(game_calc)
 
 
 if __name__ == '__main__':

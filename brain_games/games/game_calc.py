@@ -1,61 +1,36 @@
 #!/usr/bin/python -tt
 
 from random import randint
-from brain_games.engine import welcome_user, user_lose
 
-name = welcome_user("brain_calc")
+RULES = 'What is the result of the expression?'
 
-def brain_calc():
 
-    # Start Function
-    i = 1
-
+def generate_round():
+    random_number_one = randint(1, 100)
+    random_number_two = randint(1, 100)
     expression = ('+', '-', '*')
+    random_expression = randint(0, 2)
 
-    while i <= 3:
-        x = randint(0, 2)
-        number_1 = randint(0, 100)
-        number_2 = randint(0, 100)
+    if expression[random_expression] == expression[0]:
 
-        if expression[x] == expression[0]:
+        # Выражение сложение
+        correct_answer = random_number_one + random_number_two
+        question_expression = f"{random_number_one} + {random_number_two}"
 
-            # Выражение сложение
+    elif expression[random_expression] == expression[1]:
 
-            answer = number_1 + number_2
-            print(f'Question: {number_1} + {number_2} ')
-            useranswer = int(input('Your answer: '))
+        # Выражение вычитание
+        correct_answer = random_number_one - random_number_two
+        question_expression = f"{random_number_one} - {random_number_two}"
 
-            if useranswer == answer:
-                print("Correct!")
-                i += 1
-            else:
-                user_lose(useranswer, answer, name)
 
-        elif expression[x] == expression[1]:
+    elif expression[random_expression] == expression[2]:
 
-            # Выражение вычитание
+        # Выражение умножение
+        correct_answer = random_number_one * random_number_two
+        question_expression = f"{random_number_one} * {random_number_two}"
 
-            answer = number_1 - number_2
-            print(f'Question: {number_1} - {number_2} ')
-            useranswer = int(input('Your answer: '))
-            if useranswer == answer:
-                print("Correct!")
-                i += 1
-            else:
-                user_lose(useranswer, answer, name)
+    else:
+        print("Wrong expression")
 
-        elif expression[x] == expression[2]:
-
-            # Выражение умножение
-
-            answer = number_1 * number_2
-            print(f'Question: {number_1} * {number_2} ')
-            useranswer = int(input('Your answer: '))
-            print(answer)
-            if useranswer == answer:
-                print("Correct!")
-                i += 1
-            else:
-                user_lose(useranswer, answer, name)
-
-    print(f"Congratulations, {name}!")
+    return question_expression, correct_answer
