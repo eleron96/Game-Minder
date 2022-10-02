@@ -1,9 +1,11 @@
 #!/usr/bin/python -tt
 
-from ..games.game_prime import brain_prime
+from brain_games.engine import run
+from brain_games.games import game_prime
+
 
 def main():
-    brain_prime()
+    run(game_prime)
 
 
 if __name__ == '__main__':

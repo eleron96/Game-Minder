@@ -1,36 +1,19 @@
 from random import randint
-from brain_games.engine import welcome_user, user_lose
 
-name = welcome_user("brain_prime")
-
-
-def brain_prime():
-    i = 1
-
-    while i <= 3:
-
-        r_number = randint(0, 100)
-        number_is_prime = IsPrime(r_number)
-
-        print(f'Question: {r_number} ')
-        useranswer = str(input('Your answer: '))
-
-        if number_is_prime == useranswer.lower():
-            print("Correct!")
-            i += 1
-        else:
-            user_lose(useranswer, number_is_prime, name)
-
-    print(f"Congratulations, {name}!")
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def IsPrime(n):
-    if n > 1:
-        for i in range(2, int(n / 2) + 1):
-            if (n % i) == 0:
-                return 'no'
+def generate_round():
+    random_number = randint(0, 100)
+    correct_answer = ''
+    if random_number > 1:
+        for i in range(2, int(random_number / 2) + 1):
+            if (random_number % i) == 0:
+                correct_answer = 'no'
                 break
         else:
-            return 'yes'
+            correct_answer = 'yes'
     else:
-        return 'no'
+        correct_answer = 'no'
+
+    return random_number, correct_answer
