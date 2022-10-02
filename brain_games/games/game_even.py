@@ -5,17 +5,27 @@ from random import randint
 RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def brain_even():
-    for _ in range(10):
-        value = randint(0, 10)
-    return value
+def generate_round():
+    random_number = randint(1, 100)
 
-
-def is_even(number):
-    if (number % 2) == 0:
-        return "yes"
+    if random_number % 2 == 0:
+        correct_answer = 'yes'
     else:
-        return "no"
+        correct_answer = 'no'
+
+    return random_number, correct_answer
+
+# def brain_even():
+#     for _ in range(10):
+#         value = randint(0, 10)
+#     return value
+#
+#
+# def is_even(number):
+#     if (number % 2) == 0:
+#         return "yes"
+#     else:
+#         return "no"
 
 # def brain_even():
 #     i = 1
