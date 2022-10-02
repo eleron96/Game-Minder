@@ -1,34 +1,21 @@
 from random import randint
-from brain_games.engine import welcome_user, user_lose
 
-name = welcome_user("brain_gcd")
+RULES = 'Find the greatest common divisor of given numbers.'
 
 
-def brain_gcd():
-    # Start Function
-    i = 1
+def generate_round():
 
-    while i <= 3:
-        answer = 0
+    random_number_one = randint(0, 1000)
+    random_number_two = randint(0, 1000)
 
-        a = expression_value = randint(0, 1000)
-        b = expression_value = randint(0, 1000)
+    random_number = f'{random_number_one} and {random_number_two} '
 
-        print(f'Question: {a} and {b} ')
-
-        while a != 0 and b != 0:
-            if a > b:
-                a = a % b
-            else:
-                b = b % a
-        answer = a + b
-
-        useranswer = int(input('Your answer: '))
-
-        if useranswer == answer:
-            print("Correct!")
-            i += 1
+    while random_number_one != 0 and random_number_two != 0:
+        if random_number_one > random_number_two:
+            random_number_one = random_number_one % random_number_two
         else:
-            user_lose(useranswer, answer, name)
+            random_number_two = random_number_two % random_number_one
 
-    print(f"Congratulations, {name}!")
+    correct_answer = random_number_one + random_number_two
+
+    return random_number, correct_answer
