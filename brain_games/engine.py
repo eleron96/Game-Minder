@@ -23,7 +23,7 @@ def run(game):
         if str(user_answer) == str(correct_answer):
             print('Correct!')
         else:
-            sys.exit(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.\n"
+            return  print(f"'{user_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.\n"
                             + f"Let's try again, {name}!")
 
 
