@@ -24,7 +24,7 @@ def run(game):
             print('Correct!')
         else:
             if user_answer == "yes" or user_answer == "no":
-                return sys.exit(f'"{user_answer}" is wrong answer ;(. Correct answer was "{correct_answer}".\n'
+                return sys.exit(f'"{str(user_answer)}" is wrong answer ;(. Correct answer was "{str(correct_answer)}".\n'
                                 + f"Let's try again,{name}!")
             else:
                 return sys.exit(f"{user_answer} is wrong answer ;(. Correct answer was {correct_answer}.\n"
