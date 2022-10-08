@@ -9,7 +9,7 @@ def generate_round():
     secret_number = randint(0, 3)
 
     list_numbers = list(range(random_number_one, 100, random_number_two))
-    short_list_numbers = list_numbers[:5]
+    short_list_numbers = list_numbers[:7]
 
     secret_number_list = short_list_numbers[secret_number]
     short_list_numbers[secret_number] = ".."
