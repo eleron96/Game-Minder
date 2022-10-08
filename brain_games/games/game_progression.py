@@ -13,5 +13,6 @@ def generate_round():
 
     secret_number_list = short_list_numbers[secret_number]
     short_list_numbers[secret_number] = ".."
+    short_list_numbers = " ".join(map(str, short_list_numbers))
 
     return short_list_numbers, secret_number_list
