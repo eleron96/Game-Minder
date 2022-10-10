@@ -1,14 +1,49 @@
-#Demo Brain-even
-[![asciicast](https://asciinema.org/a/okLc7NJa0KNqarltAqmVjmCoK.svg)](https://asciinema.org/a/okLc7NJa0KNqarltAqmVjmCoK)
+# "Игры Разума"
 
-#Demo Brain-calc
-[![asciicast](https://asciinema.org/a/4m3XRaki7JtyEaMHwRF7Ji7yF.svg)](https://asciinema.org/a/4m3XRaki7JtyEaMHwRF7Ji7yF)
+<a href="https://codeclimate.com/github/eleron96/python-project-lvl1/maintainability">
+<img src="https://api.codeclimate.com/v1/badges/5e6dcb0d593e47798c11/maintainability" /></a>
 
-#Demo Brain-GCD
-[![asciicast](https://asciinema.org/a/THG20ugH64dYPKlNSWQITitTE.svg)](https://asciinema.org/a/THG20ugH64dYPKlNSWQITitTE)
+Данная сборка содержит в себе несколько простейших игры, в которые можно поиграть исползуя командную строку.
+Принцип игр базируеться на простом "вопрос" -> "ответ".
+Игроку предстаит ответить на 3 вопроса. если все 3 отведа будут верными, игрок выиграл, 
+если он допустих хотя бы одну ошибку, он проиграл.
 
-#Demo Brain-Progressive
-[![asciicast](https://asciinema.org/a/nXq7Y9rAOAxC0cMi6M6kQbA15.svg)](https://asciinema.org/a/nXq7Y9rAOAxC0cMi6M6kQbA15)
 
-#Demo Brain-Prime
-[![asciicast](https://asciinema.org/a/PcgXa4Bz36uxoqdbZPkfl0Cfx.svg)](https://asciinema.org/a/PcgXa4Bz36uxoqdbZPkfl0Cfx)
+### В данном проекте содержаться следующие игры:
+
+* Игра: **"Проверка на чётность"** - Игроку предстоит ответить, являеться число четным или нет
+* Игра: **"Калькулятор"** - Пользователю показывается случайное математическое выражение, 
+которое нужно вычислить и записать правильный ответ.
+* Игра: **"НОД"** - "наибольший общий делитель (НОД)",  Пользователю показывается два случайных числа из которых
+он должен вычислить и ввести наибольший общий делитель этих чисел.
+* Игра: **"Арифметическая прогрессия"** - Игрок должен определить число, скрытое точками ".."
+среди ряда чисел образующее арифметическую прогрессию.
+* Игра: **"Простое ли число?"** - Игрок должен определить является ли число "простым"
+
+### Как запустить игры
+
+```sh
+brain-even              # Запускает игру "Проверка на чётность"
+brain-calc              # Запускает игру "Калькулятор"
+brain-gcd               # Запускает игру "наибольший общий делитель (НОД)"
+brain-progression       # Запускает игру "Арифметическая прогрессия"
+brain-prime             # Запускает игру "Простое ли число?"
+```
+### Установка
+#### *Шаг 1: Установка пакетов*
+
+Установите все необходимые пакеты следующей командой
+```sh
+make git
+```
+<details>
+<summary>Какие действия совершает данная команда</summary>
+
+```sh
+	poetry install
+	poetry version patch
+	poetry build
+	python3 -m pip install --user dist/*.whl
+	poetry publish --dry-run --username ' ' --password ' '
+```
+
