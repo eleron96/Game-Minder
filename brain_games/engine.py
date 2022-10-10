@@ -1,20 +1,15 @@
-#!/usr/bin/python -tt
-
 import prompt
 
-
-def welcome_user():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print(f"Hello, {name}!")
-    return name
+GAME_ROUNDS = 3
 
 
 def run(game):
-    name = welcome_user()
+    print("Welcome to the Brain Games!")
+    name = prompt.string('May I have your name? ')
+    print(f"Hello, {name}!")
     print(game.RULES)
 
-    for _ in range(3):
+    for _ in range(GAME_ROUNDS):
         question, correct_answer = game.generate_round()
         print(f"Question: {question}")
         user_answer = input("Your answer: ")

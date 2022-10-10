@@ -1,5 +1,3 @@
-#!/usr/bin/python -tt
-
 from random import randint
 
 RULES = 'What is the result of the expression?'
