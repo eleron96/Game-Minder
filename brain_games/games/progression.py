@@ -4,15 +4,15 @@ RULES = 'What number is missing in the progression?'
 
 
 def generate_round():
-    random_number_one = randint(1, 10)
-    random_number_two = randint(1, 10)
-    hidden_number = randint(0, 3)
+    start_progression_number = randint(1, 10)
+    step_progression = randint(1, 10)
+    random_index = randint(0, 5)
 
-    roll_numbers = list(range(random_number_one, 100, random_number_two))
-    short_list_numbers = roll_numbers[:7]
+    roll_numbers = list(range(start_progression_number, 100, step_progression))
+    short_range_numbers = roll_numbers[:7]
 
-    secret_number_list = str(short_list_numbers[hidden_number])
-    short_list_numbers[hidden_number] = ".."
-    short_list_numbers = " ".join(map(str, short_list_numbers))
+    hidden_range_numbers = short_range_numbers[random_index]
+    short_range_numbers[random_index] = ".."
+    short_range_numbers = " ".join(map(str, short_range_numbers))
 
-    return short_list_numbers, secret_number_list
+    return short_range_numbers, str(hidden_range_numbers)

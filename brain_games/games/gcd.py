@@ -9,9 +9,9 @@ def generate_round():
 
     random_number = f'{random_number_one} {random_number_two} '
 
-    correct_answer = str(gcd_finder(random_number_one, random_number_two))
+    correct_answer = gcd_finder(random_number_one, random_number_two)
 
-    return random_number, correct_answer
+    return random_number, str(correct_answer)
 
 
 def gcd_finder(number_one, number_two):
