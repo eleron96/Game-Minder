@@ -11,7 +11,7 @@ def generate_round():
     roll_numbers = list(range(random_number_one, 100, random_number_two))
     short_list_numbers = roll_numbers[:7]
 
-    secret_number_list = short_list_numbers[hidden_number]
+    secret_number_list = str(short_list_numbers[hidden_number])
     short_list_numbers[hidden_number] = ".."
     short_list_numbers = " ".join(map(str, short_list_numbers))
 

@@ -5,7 +5,7 @@ RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 def generate_round():
     random_number = randint(0, 100)
-    correct_answer = is_prime(random_number)
+    correct_answer = str(is_prime(random_number))
     return random_number, correct_answer
 
 

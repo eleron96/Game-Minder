@@ -24,4 +24,4 @@ def generate_round():
     else:
         print("Wrong expression")
 
-    return question_expression, correct_answer
+    return question_expression, str(correct_answer)
