@@ -9,10 +9,8 @@ def generate_round():
     return random_number, str(correct_answer)
 
 
-def is_prime(number):
-    if number > 1:
-        for i in range(2, int(number / 2) + 1):
-            if (number % i) == 0:
-                return False
-            return True
-        return False
+def is_prime(n):
+    for i in range(2, n):
+        if (n % i) == 0:
+            return False
+    return True
