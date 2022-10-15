@@ -15,4 +15,4 @@ def generate_round():
     short_range_numbers[random_index] = ".."
     short_range_numbers = " ".join(map(str, short_range_numbers))
 
-    return short_range_numbers, str(hidden_range_numbers)
+    return str(short_range_numbers), str(hidden_range_numbers)

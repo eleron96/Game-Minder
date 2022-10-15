@@ -14,11 +14,12 @@ def run(game):
         print(f"Question: {question}")
         user_answer = input("Your answer: ")
 
-        if str(user_answer) == str(correct_answer):
+        if user_answer == correct_answer:
             print('Correct!')
         else:
-            return print(f"'{user_answer}' is wrong answer ;(. "
-                         f"Correct answer was '{correct_answer}'.\n"
-                         + f"Let's try again, {name}!")
-
-    print(f"Congratulations, {name}!")
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.\n"
+                  + f"Let's try again, {name}!")
+            break
+    else:
+        print(f"Congratulations, {name}!")

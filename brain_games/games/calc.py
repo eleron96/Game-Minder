@@ -19,4 +19,4 @@ def generate_round():
         correct_answer = random_number_one * random_number_two
         question_expression = f"{random_number_one} * {random_number_two}"
 
-    return question_expression, str(correct_answer)
+    return str(question_expression), str(correct_answer)
