@@ -7,11 +7,11 @@ def generate_round():
     random_number_one = randint(0, 1000)
     random_number_two = randint(0, 1000)
 
-    random_number = f'{random_number_one} {random_number_two} '
+    expression_number = f'{random_number_one} {random_number_two} '
 
     correct_answer = gcd_finder(random_number_one, random_number_two)
 
-    return str(random_number), str(correct_answer)
+    return expression_number, str(correct_answer)
 
 
 def gcd_finder(number_one, number_two):

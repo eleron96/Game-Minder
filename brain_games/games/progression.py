@@ -8,11 +8,11 @@ def generate_round():
     step_progression = randint(1, 10)
     random_index = randint(0, 5)
 
-    roll_numbers = list(range(start_progression_number, 100, step_progression))
-    short_range_numbers = roll_numbers[:7]
+    progression = list(range(start_progression_number, 100, step_progression))
+    short_range_number = progression[:7]
 
-    hidden_range_numbers = short_range_numbers[random_index]
-    short_range_numbers[random_index] = ".."
-    short_range_numbers = " ".join(map(str, short_range_numbers))
+    hidden_range_number = short_range_number[random_index]
+    short_range_number[random_index] = ".."
+    short_range_number = " ".join(map(str, short_range_number))
 
-    return str(short_range_numbers), str(hidden_range_numbers)
+    return short_range_number, str(hidden_range_number)
